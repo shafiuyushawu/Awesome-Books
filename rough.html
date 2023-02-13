@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="book-list"></div>
+
+    <input type="text" id="title-input" placeholder="Enter book title">
+    <input type="text" id="author-input" placeholder="Enter author name">
+    <button id="add-button"
+        onclick="addBook(document.getElementById('title-input').value, document.getElementById('author-input').value)">Add</button>
+
+    <script>
+        let bookCollection = [];
+
+        const addBook = (title, author) => {
+            let newBook = {
+                title: title,
+                author: author
+            };
+            bookCollection.push(newBook);
+            localStorage.setItem("bookCollection", JSON.stringify(bookCollection));
+            displayBooks();
+        };
+
+        const removeBook = (title) => {
+            bookCollection = bookCollection.filter(book => book.title !== title);
+            localStorage.setItem("bookCollection", JSON.stringify(bookCollection));
+            displayBooks();
+        };
+
+        const displayBooks = () => {
+            let bookList = document.getElementById("book-list");
+            bookList.innerHTML = "";
+            for (let book of bookCollection) {
+                bookList.innerHTML += `<p>Title: ${book.title} - Author: ${book.author} <button onclick="removeBook('${book.title}')">Remove</button></p>`;
+            }
+        };
+
+        if (localStorage.getItem("bookCollection")) {
+            bookCollection = JSON.parse(localStorage.getItem("bookCollection"));
+        }
+
+        displayBooks();
+    </script>
+
+</body>
+
+</html>
