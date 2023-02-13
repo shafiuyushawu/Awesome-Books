@@ -21,10 +21,10 @@ addButton.addEventListener('click', (event) => {
     }
     addBook(bookTitle.value, bookAuthor.value)
 
-    const removeBook = () => {
-        bookCollection = bookCollection.filter(book => book.title !== title)
-        localStorage.setItem('bookStore', JSON.stringify(bookStore))
-    }
+   const removeBook = (title) => {
+        bookItems = bookItems.filter(book => book.title !== title);
+        bookItems.setItem("bookItems", JSON.stringify(bookItems));
+    };
 
     // display
     const displayBooks = () => {
