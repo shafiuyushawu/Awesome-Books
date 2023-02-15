@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/shafiuyushawu/Awesome-Books/issues"
   },
-  "homepage": "https://github.com/shafiuyushawu/Awesome-Books#readme"
+  "homepage": "https://github.com/shafiuyushawu/Awesome-Books#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.2.6"
+  }
 }

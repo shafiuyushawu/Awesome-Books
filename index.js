@@ -1,71 +1,74 @@
-class Book {
-  constructor(title, author) {
-    this.title = title;
-    this.author = author;
-  }
-}
-
-class Books {
+class BookStore {
   constructor() {
     this.books = [];
   }
 
-  add = (title, author) => {
-    const book = new Book(title, author);
+  addBook(title, author) {
+    const book = {
+      title: title,
+      author: author
+    };
     this.books.push(book);
     return book;
   }
 
-  set assignBook(books) {
-    this.books = books;
+  removeBook(index) {
+    this.books.splice(index, 1);
   }
 
   get allBooks() {
     return this.books;
   }
 
-  remove = (index) => {
-    this.books = this.books.filter((book, j) => j !== index)
+  set allBooks(books) {
+    this.books = books;
   }
 }
 
 const addButton = document.getElementById('addButton');
 const bookTitle = document.getElementById('bookTitle');
 const bookAuthor = document.getElementById('bookAuthor');
+const bookItems = document.getElementById('bookItems');
 
-const bk = new Books();
+const bookshelf = new BookStore();
 
 function displayBooks(books) {
-  const bookItems = document.getElementById('bookItems');
+  bookItems.innerHTML = '';
 
-  books.forEach((book) => {
+  books.forEach((book, index) => {
     const itemDiv = document.createElement('ul')
-    const bookElement = document.createElement('li');
+    const bookItem = document.createElement('li');
     const remLi = document.createElement('li');
     const deleteBtn = document.createElement('button');
     deleteBtn.innerHTML = "Remove"
-    bookElement.textContent = `${book.title} by ${book.author}`;
+    bookItem.textContent = `${book.title} by ${book.author}`;
     
     bookItems.appendChild(itemDiv);
-    itemDiv.appendChild(bookElement);
+    itemDiv.appendChild(bookItem);
     itemDiv.appendChild(remLi);
-    remLi.appendChild(deleteBtn)
+    remLi.appendChild(deleteBtn);
+
+    deleteBtn.addEventListener('click', () => {
+      bookshelf.removeBook(index);
+      localStorage.setItem('books', JSON.stringify(bookshelf.allBooks));
+      displayBooks(bookshelf.allBooks);
+    });
   });
 }
 
-
 const storedBooks = JSON.parse(localStorage.getItem('books'));
 if (storedBooks) {
-  bk.assignBook = storedBooks;
+  bookshelf.allBooks = storedBooks;
 }
 
-displayBooks(bk.allBooks);
+displayBooks(bookshelf.allBooks);
 
 addButton.addEventListener('click', (event) => {
   event.preventDefault();
 
-  const book = bk.add(bookTitle.value, bookAuthor.value);
-  localStorage.setItem('books', JSON.stringify(bk.allBooks));
-  displayBooks(bk.allBooks);
-  console.log(bookTitle.value);
+  bookshelf.addBook(bookTitle.value, bookAuthor.value);
+  localStorage.setItem('books', JSON.stringify(bookshelf.allBooks));
+  displayBooks(bookshelf.allBooks);
+  bookTitle.value = '';
+  bookAuthor.value = '';
 });
