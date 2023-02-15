@@ -2404,6 +2404,11 @@ html {
   border-bottom-right-radius: var(--rounded-btn, 0.5rem);
 }
 
+.my-1 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
 .my-5 {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
@@ -2414,9 +2419,12 @@ html {
   margin-bottom: 0.5rem;
 }
 
-.my-1 {
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
 }
 
 .flex {
@@ -2443,12 +2451,16 @@ html {
   justify-content: space-between;
 }
 
+.self-end {
+  align-self: flex-end;
+}
+
 .border-2 {
   border-width: 2px;
 }
 
-.border-4 {
-  border-width: 4px;
+.border-t-2 {
+  border-top-width: 2px;
 }
 
 .border-black {
@@ -2456,25 +2468,31 @@ html {
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
-.p-5 {
-  padding: 1.25rem;
-}
-
-.p-2 {
-  padding: 0.5rem;
+.border-t-black {
+  --tw-border-opacity: 1;
+  border-top-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
 .p-1 {
   padding: 0.25rem;
 }
 
-.p-11 {
-  padding: 2.75rem;
+.p-5 {
+  padding: 1.25rem;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.pl-5 {
+  padding-left: 1.25rem;
 }
 
 .text-2xl {
@@ -2487,22 +2505,8 @@ html {
   line-height: 2.25rem;
 }
 
-.font-extrabold {
-  font-weight: 800;
-}
-
 .font-semibold {
   font-weight: 600;
-}
-
-.text-blue-500 {
-  --tw-text-opacity: 1;
-  color: rgb(59 130 246 / var(--tw-text-opacity));
-}
-
-.even\:bg-\[\#111\]:nth-child(even) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(17 17 17 / var(--tw-bg-opacity));
 }
 
 .even\:bg-slate-200:nth-child(even) {

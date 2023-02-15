@@ -37,9 +37,11 @@ function displayBooks(books) {
 
   books.forEach((book, index) => {
     const itemDiv = document.createElement('ul')
-    itemDiv.className = "flex justify-between my-1 even:bg-slate-200"
+    itemDiv.className = "flex justify-between  my-1 even:bg-slate-200"
     const bookItem = document.createElement('li');
+    bookItem.className = "px-5"
     const remLi = document.createElement('li');
+    remLi.className = "px-5"
     const deleteBtn = document.createElement('button');
     deleteBtn.className = "btn btn-sm btn-outline"
     deleteBtn.innerHTML = "Remove"

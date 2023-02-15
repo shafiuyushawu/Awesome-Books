@@ -85,15 +85,39 @@ To get the content of this project locally you need to run the following command
 
 1. Download the **Zip** file or clone the repo with:
 ```bash
-git clone https://github.com/hiwina/Awesome-Book
+git clone https://github.com/shafiuyushawu/Awesome-Books/tree/class-objects
 ```
 3. To access cloned directory run:
 ```bash
-cd awesome-books
+cd Awesome-Books
 ```
 3. Open it with the live server
 
+4. Run the following command to use `Tailwind css` and `Daisyui` class.
 
+  - Copy and paste below in your terminal install taiwind.css
+      ```bash
+        npm install -D tailwindcss
+      ``
+  - Copy and paste below to initialize `tailwind.config.js`
+      ```bash
+        npx tailwindcss init
+      ``
+  - Copy and paste below to replace all the lines in `tailwind.config.js`
+      ```bash
+        /** @type {import('tailwindcss').Config} */
+        module.exports = {
+          content: ["./src/**/*.{html,js}"],
+          theme: {
+            extend: {},
+          },
+          plugins: [require('daisyui')],
+        }
+      ``
+  - Copy and paste below to install daisy ui packages.
+    ```bash
+        npm install daisyui
+      ``
 ### Install
 
 > To install linters and other project's dependencies run:
