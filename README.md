@@ -87,7 +87,7 @@ To get the content of this project locally you need to run the following command
 ```bash
 git clone https://github.com/shafiuyushawu/Awesome-Books/tree/class-objects
 ```
-3. To access cloned directory run:
+2. To access cloned directory run:
 ```bash
 cd Awesome-Books
 ```
