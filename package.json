@@ -19,5 +19,8 @@
   "homepage": "https://github.com/shafiuyushawu/Awesome-Books#readme",
   "devDependencies": {
     "tailwindcss": "^3.2.6"
+  },
+  "dependencies": {
+    "daisyui": "^2.50.1"
   }
 }

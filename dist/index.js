@@ -37,11 +37,13 @@ function displayBooks(books) {
 
   books.forEach((book, index) => {
     const itemDiv = document.createElement('ul')
+    itemDiv.className = "flex justify-between my-1 even:bg-slate-200"
     const bookItem = document.createElement('li');
     const remLi = document.createElement('li');
     const deleteBtn = document.createElement('button');
+    deleteBtn.className = "btn btn-sm btn-outline"
     deleteBtn.innerHTML = "Remove"
-    bookItem.textContent = `${book.title} by ${book.author}`;
+    bookItem.textContent = `"${book.title}" by ${book.author}`;
     
     bookItems.appendChild(itemDiv);
     itemDiv.appendChild(bookItem);
@@ -66,9 +68,13 @@ displayBooks(bookshelf.allBooks);
 addButton.addEventListener('click', (event) => {
   event.preventDefault();
 
-  bookshelf.addBook(bookTitle.value, bookAuthor.value);
-  localStorage.setItem('books', JSON.stringify(bookshelf.allBooks));
+  if (bookTitle.value !== '' & bookAuthor.value !== ""){
+   bookshelf.addBook(bookTitle.value, bookAuthor.value);
+    localStorage.setItem('books', JSON.stringify(bookshelf.allBooks));
   displayBooks(bookshelf.allBooks);
   bookTitle.value = '';
   bookAuthor.value = '';
+  }
+
+  
 });
