@@ -91,19 +91,19 @@ git clone https://github.com/shafiuyushawu/Awesome-Books/tree/class-objects
 ```bash
 cd Awesome-Books
 ```
-3. Open it with the live server
 
-4. Run the following command to use `Tailwind css` and `Daisyui` class.
 
-  - Copy and paste below in your terminal install taiwind.css
+**Run the following command to use `Tailwind css` and `Daisyui` class:**
+
+1. Copy and paste below in your terminal install taiwind.css:
       ```bash
         npm install -D tailwindcss
       ``
-  - Copy and paste below to initialize `tailwind.config.js`
+2. Copy and paste below to initialize `tailwind.config.js`
       ```bash
         npx tailwindcss init
       ``
-  - Copy and paste below to replace all the lines in `tailwind.config.js`
+3. Copy and paste below to replace all the lines in `tailwind.config.js`
       ```bash
         /** @type {import('tailwindcss').Config} */
         module.exports = {
@@ -114,10 +114,13 @@ cd Awesome-Books
           plugins: [require('daisyui')],
         }
       ``
-  - Copy and paste below to install daisy ui packages.
-    ```bash
+4. Copy and paste below to install daisy ui packages.
+      ```bash
         npm install daisyui
       ``
+
+5. Now open with live server
+
 ### Install
 
 > To install linters and other project's dependencies run:
