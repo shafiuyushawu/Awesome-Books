@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,17 +9,53 @@
     <link rel="stylesheet" href="./input.css">
     <title>Document</title>
 </head>
-<body class="flex flex-col justify-center items-center">
-    <div class="container p-5 justify-center items-center flex flex-col ">
-        <h1 class="text-3xl font-semibold mb-5">Awesome Books</h1>
-        <div id="bookItems" class="flex flex-col border-2 border-black w-[400px] py-5"></div>
-        <h2 class="text-2xl  font-semibold my-5 border-t-2 border-t-black">Add a new book</h2>
-        <form action="" class="">
-            <input type="text" id="bookTitle" placeholder="Please Enter Titile" class="border-2 border-black p-1"><br><br>
-            <input type="text" id="bookAuthor" placeholder="Please Enter Author" class="border-2 border-black p-1"><br><br>
-            <button type="submit" id="addButton" class="btn btn-sm btn-outline">Add</button>
-        </form>
-    </div>
-   <script src="./index.js"></script>
+
+<body>
+    <header class="border-2 border-black p-3 mx-5 mt-5 ">
+        <nav class="flex justify-between cursor-pointer">
+            <h1 class="text-3xl font-bold">Awesome books</h1>
+            <ul class="flex">
+                <li id="viewList" class="px-10 text-2xl font-medium btn-outline">List</li>
+                <li id="addNew" class="px-5 text-2xl font-medium btn-outline border-x-2 border-x-black">Add new</li>
+                <li id="Contact" class="px-5 text-2xl font-medium btn-outline">Contact</li>
+            </ul>
+        </nav>
+    </header>
+    <main class=" flex flex-col -[100%] mx-5 mt-5">
+
+        <div id="bookCont">
+            <h2 class="text-center text-3xl font-bold my-10">All awesome books</h2>
+            <div id="bookItems" class="flex flex-col border-2 border-black"></div>
+        </div>
+        <div id="addForm" class="hidden ">
+            <h2 class="text-center text-3xl font-bold my-10">Add a new book</h2>
+            <form class="flex flex-col justify-center items-center">
+                <input type="text" id="bookTitle" placeholder="Please Enter Titile"
+                    class="border-2 border-black p-1 w-[30%]"><br><br>
+                <input type="text" id="bookAuthor" placeholder="Please Enter Author"
+                    class="border-2 border-black p-1 w-[30%]"><br><br>
+                <button type="submit" id="addButton" class="btn btn-sm rounded-none btn-outline w-[10%]">Add</button>
+            </form>
+        </div>
+        <div id="ContactMe" class="hidden">
+            <div class="flex flex-col justify-center items-center">
+                <h2 class="text-3xl font-bold my-10">Contact Information</h2>
+                <span class="text-xl my-2">
+                    Do you have any questions or you just want to say "Hello" ? <br> You can reach out to us !
+                </span>
+
+                <ul class="list-disc text-xl">
+                    <li>Our e-mail mail@mail.com</li>
+                    <li>Our phone number: 0123456789</li>
+                    <li>Our address: Streetname 22, 84503 Cit, Country</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer class="border-2 border-black p-5 mx-5 fixed bottom-0 w-[98%]">
+        <span class="text-xl font-bold">Copyright &copy; ...</span>
+    </footer>
+    <script src="./index.js"></script>
 </body>
+
 </html>
