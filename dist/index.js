@@ -38,9 +38,17 @@ const Contact = document.getElementById('Contact')
 const bookCont = document.getElementById('bookCont')
 const addForm = document.getElementById('addForm')
 const ContactMe = document.getElementById('ContactMe')
+let today = new Date()
+const dateDiv = document.getElementById('date')
+const datetime = today.toLocaleDateString('en-US', {
+  dateStyle: 'long',
+});
 
+const time = today.toLocaleTimeString('en-US', {
+  timeStyle: 'medium',
+});
 
-
+dateDiv.innerHTML = `${datetime}, ${time}`
 
 const bookshelf = new BookStore();
 
