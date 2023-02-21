@@ -7,7 +7,7 @@ const bookAuthor = document.getElementById('bookAuthor');
 
 const bookshelf = new BookStore()
 
-export default function addBook() {
+const addBook = () => {
     addButton.addEventListener('click', (event) => {
         event.preventDefault();
         if (bookTitle.value !== '' & bookAuthor.value !== "") {
@@ -19,3 +19,5 @@ export default function addBook() {
         }
     });
 }
+
+export default addBook;

@@ -1,4 +1,6 @@
-export default function displayBooks(bookshelf, bookItems) {
+
+
+const displayBooks = (bookshelf, bookItems) => {
     bookItems.innerHTML = '';
 
     bookshelf.allBooks.forEach((book, index) => {
@@ -26,3 +28,5 @@ export default function displayBooks(bookshelf, bookItems) {
         });
     });
 }
+
+export default displayBooks;

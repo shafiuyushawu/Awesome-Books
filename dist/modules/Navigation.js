@@ -7,7 +7,7 @@ const addForm = document.getElementById('addForm')
 const ContactMe = document.getElementById('ContactMe')
 
 
-export default function Navigation() {
+const Navigation = () => {
     viewList.addEventListener('click', () => {
         bookCont.className = 'block'
         addForm.className = 'hidden'
@@ -25,4 +25,6 @@ export default function Navigation() {
         addForm.className = 'hidden'
         ContactMe.className = 'block'
     })
-} 
+}
+
+export default Navigation
