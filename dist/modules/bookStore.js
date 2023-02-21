@@ -1,13 +1,12 @@
+import Books from './Books.js'
+
 export default class BookStore {
     constructor() {
         this.books = [];
     }
 
     addBook(title, author) {
-        const book = {
-            title: title,
-            author: author
-        };
+        const book = new Books()
         this.books.push(book);
         return book;
     }
