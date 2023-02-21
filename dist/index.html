@@ -22,12 +22,12 @@
         </nav>
     </header>
     <main class=" flex flex-col -[100%] mx-5 mt-5">
-        <div id="date" class="flex justify-end text-xl"></div>
-        <div id="bookCont">
+        <section id="date" class="flex justify-end text-xl"></section>
+        <section id="bookCont">
             <h2 class="text-center text-3xl font-bold my-10">All awesome books</h2>
             <div id="bookItems" class="flex flex-col border-2 border-black"></div>
-        </div>
-        <div id="addForm" class="hidden ">
+        </section>
+        <section id="addForm" class="hidden ">
             <h2 class="text-center text-3xl font-bold my-10">Add a new book</h2>
             <form class="flex flex-col justify-center items-center">
                 <input type="text" id="bookTitle" placeholder="Please Enter Titile"
@@ -36,26 +36,27 @@
                     class="border-2 border-black p-1 w-[30%]"><br><br>
                 <button type="submit" id="addButton" class="btn btn-sm rounded-none btn-outline w-[10%]">Add</button>
             </form>
-        </div>
-        <div id="ContactMe" class="hidden">
+        </section>
+        <section id="ContactMe" class="hidden">
             <div class="flex flex-col justify-center items-center">
                 <h2 class="text-3xl font-bold my-10">Contact Information</h2>
                 <span class="text-xl my-2">
                     Do you have any questions or you just want to say "Hello" ? <br> You can reach out to us !
                 </span>
-
-                <ul class="list-disc text-xl">
-                    <li>Our e-mail mail@mail.com</li>
-                    <li>Our phone number: 0123456789</li>
-                    <li>Our address: Streetname 22, 84503 Cit, Country</li>
-                </ul>
+                <address>
+                    <ul class="list-disc text-xl">
+                        <li>Our e-mail mail@mail.com</li>
+                        <li>Our phone number: 0123456789</li>
+                        <li>Our address: Streetname 22, 84503 Cit, Country</li>
+                    </ul>
+                </address>
             </div>
-        </div>
+        </section>
     </main>
     <footer class="border-2 border-black p-5 mx-5 fixed bottom-0 w-[98%]">
         <span class="text-xl font-bold">Copyright &copy; ...</span>
     </footer>
-    <script src="./index.js"></script>
+    <script type="module" src="./index.js"></script>
 </body>
 
 </html>
