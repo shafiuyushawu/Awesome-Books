@@ -8,12 +8,8 @@ import showDate from "./modules/showDate.js";
 const bookItems = document.getElementById('bookItems');
 const bookshelf = new BookStore();
 
-showDate()
+// showDate()
 storeBooks()
 displayBooks(bookshelf, bookItems);
 addBook()
 Navigation()
-
-
-
-
